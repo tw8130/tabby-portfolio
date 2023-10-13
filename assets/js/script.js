@@ -103,3 +103,18 @@ if (localStorage.getItem("theme") === "light_theme") {
   document.body.classList.remove("light_theme");
   document.body.classList.add("dark_theme");
 }
+
+//function to send an email
+function sendEmail(){
+  Email.send({
+    Host : "smtp.gmail.com",
+    Username : "mwangitabitha2020@gmail.com",
+    Password : "Tabithawm2020",
+    To : 'mwangitabitha2020@gmail.com',
+    From : document.getElementById("email").value,
+    Subject : "This is the subject",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
+}
